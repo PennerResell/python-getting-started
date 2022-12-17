@@ -20,7 +20,7 @@ class Expense(models.Model):
                                on_delete=models.CASCADE,
                                related_name='penner_expense')
     location = models.CharField(max_length=2, choices=LOCATION_CHOICES, default="Thrift")
-    amount = models.DecimalField()
+    amount = models.DecimalField(decimal_places=2,max_digits=10)
     notes = models.TextField()
     purchased = models.DateTimeField(default=timezone.now)
     created = models.DateTimeField(auto_now_add=True)
