@@ -6,7 +6,7 @@ LOCATION_CHOICES = [
     ('TH', "Thrift"),
     ('ES', "Estate"),
     ('YS', "Yard Sale"),
-    ('GW', "Goodwill"),
+    ('GW', "GW Online"),
     ('MP', "Marketplace"),
     ('PR', "Private Sale"),
     ('OT', "Other")
