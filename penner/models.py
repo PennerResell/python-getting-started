@@ -16,7 +16,7 @@ LOCATION_CHOICES = [
 class Expense(models.Model):
     name = models.CharField(max_length=250)
     slug = models.SlugField(max_length=250)
-    buyer = models.ForeignKey(User, default='2',
+    buyer = models.ForeignKey(User, default='1',
                                on_delete=models.CASCADE,
                                related_name='penner_expense')
     location = models.CharField(max_length=2, choices=LOCATION_CHOICES, default="Thrift")

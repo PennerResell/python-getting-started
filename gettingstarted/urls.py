@@ -15,8 +15,9 @@ import hello.views
 # Learn more here: https://docs.djangoproject.com/en/2.1/topics/http/urls/
 
 urlpatterns = [
-    path("", hello.views.index, name="index"),
+    #path("", hello.views.index, name="index"),
+    path('', include('penner.urls', namespace='penner')),
     path("db/", hello.views.db, name="db"),
     path("admin/", admin.site.urls),
-    path('penner/', include('penner.urls', namespace='penner')),
+    
 ]
