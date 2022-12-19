@@ -3,7 +3,7 @@ from .models import Expense
 
 
 def expense_list(request):
-    expenses = Expense.purchased.all()
+    expenses = Expense.objects.all()
     return render(request,
                  'penner/expense/list.html',
                  {'expenses': expenses})
