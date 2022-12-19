@@ -36,11 +36,11 @@ if 'SECRET_KEY' in os.environ:
 if IS_HEROKU:
     ALLOWED_HOSTS = ["*"]
 else:
-    ALLOWED_HOSTS = []
+    ALLOWED_HOSTS = ['penner.herokuapp.com']
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # if not IS_HEROKU:
-    DEBUG = True
+DEBUG = True
 
 # Application definition
 
