@@ -4,15 +4,15 @@
 
 {% block content %}
   <h1>Expenses</h1>
-  {% for expense in expense %}
+  {% for expense in expenses %}
     <h2>
-      <a href="{% url 'penner:expense_detail' expense.id %}">
-        {{ expense.name }}
+      <a href="{% url 'penner:expense_detail' expenses.id %}">
+        {{ expenses.name }}
       </a>
     </h2>
     <p class="date">
-      Purchases {{ expense.purchased }} by {{ expense.buyer }}
+      Purchases {{ expenses.purchased }} by {{ expenses.buyer }}
     </p>
-    {{ expense.notes|truncatewords:30|linebreaks }}
+    {{ expenses.notes|truncatewords:30|linebreaks }}
   {% endfor %}
 {% endblock %}
