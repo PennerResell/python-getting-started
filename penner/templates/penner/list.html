@@ -5,7 +5,7 @@
 {% block content %}
 
 <h1>Expenses</h1>
-<a href='{% url "expense:create" %}'>Add Expense</a>
+<a href='{% url "penner:create" %}'>Add Expense</a>
 <ul>
     {% for x in object_list %}
         {% if x.name %}
