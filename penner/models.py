@@ -29,6 +29,9 @@ class Expense(models.Model):
     
     def get_absolute_url(self):
         return reverse ('penner:detail', kwargs={'id':self.id} )
+    
+    def get_update_url(self):
+        return reverse ('penner:update', kwargs={'id':self.id} )
 
     def __str__(self):
         return self.name
