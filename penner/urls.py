@@ -1,10 +1,16 @@
 from django.urls import path
-from . import views
+from .views import (
+    expense_list_veiw,
+    expense_detail_veiw,
+    expense_create_veiw,
+    expense_update_veiw
+    )
 
 app_name = 'penner'
 
 urlpatterns = [
-    # post views
-    path('', views.expense_list, name='expense_list'),
-    path('<int:id>/', views.expense_detail, name='expense_detail'),
+    path('', expense_list_veiw, name='list'),
+    path('create/', expense_create_veiw, name='create'),
+    path('<int:id>/edit/', expense_update_veiw, name='update'),
+    path('<int:id>/', expense_detail_veiw, name='detail'),
 ]
