@@ -9,7 +9,7 @@
 <ul>
     {% for x in object_list %}
         {% if x.name %}
-            <li><a href='{{ x.get_absolute_url }}'>{{ x.name }} - {{ x.amount }}</a>
+            <li><a href='{{ x.get_absolute_url }}'>{{ x.name }} - ${{ x.amount }}</a>
             </li>
         {% endif %}
     {% endfor %}

@@ -4,10 +4,10 @@
 
 {% block content %}
 
-<h1>{{object.name }} <small><a href='{{ object.get_edit_url }}'>Edit</a></small></h1>
+<h1>{{object.name }} <small><a href='{{ object.get_update_url }}'>Edit</a></small></h1>
 
 <ul>
-   <li>Amount: {{object.amount }} </li>
+   <li>Amount: ${{object.amount }} </li>
    <li>Location: {{object.location }} </li>
    <li>Buyer: {{object.buyer }} </li>
    <li>Date Purchased: {{object.purchased }} </li>
