@@ -1,4 +1,19 @@
 {% extends "penner/base.html" %}
 {% load static %} 
 
-<h1>Hi Karen</h1>
+
+{% block content %}
+
+<h1>Expenses</h1>
+<a href='{% url "expense:create" %}'>Add Expense</a>
+<ul>
+    {% for x in object_list %}
+        {% if x.name %}
+            <li><a href='{{ x.get_absolute_url }}'>{{ x.name }} - {{ x.amount }}</a>
+            </li>
+        {% endif %}
+    {% endfor %}
+</ul>
+
+
+{% endblock content %}
