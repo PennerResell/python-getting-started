@@ -1,6 +1,6 @@
 from django import forms
 from .models import Expense
-from bootstrap_datepicker_plus.widgets import DatePickerInput
+
 
 class ExpenseForm(forms.ModelForm):
     
