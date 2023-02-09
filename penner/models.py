@@ -21,7 +21,7 @@ class Expense(models.Model):
     buyer = models.ForeignKey(User, default='1',
                                on_delete=models.CASCADE,
                                related_name='penner_expense')
-    location = models.CharField(max_length=2, choices=LOCATION_CHOICES, default="Thrift")
+    location = models.CharField('Location Type', max_length=2, choices=LOCATION_CHOICES, default="Thrift")
     amount = models.DecimalField(decimal_places=2,max_digits=10)
     notes = models.TextField(blank=True, null=True)
     purchased = models.DateField(default=date.today)
