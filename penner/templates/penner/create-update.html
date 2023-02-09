@@ -10,9 +10,11 @@
 {% endif %}
 <div style="margin-top:30px;">
     <form action = '.' method="POST">
+        <div class="mb-3">
         {% csrf_token %}
        {% crispy form %}
-        <button style='margin-top:10px;' type='submit' >Add Expense</button>
+        <button type="submit" class="btn btn-primary">Add Expense</button>
+        </div>
     </form>
 </div>
 
