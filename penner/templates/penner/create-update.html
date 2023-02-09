@@ -1,5 +1,6 @@
 {% extends "penner/base.html" %}
 {% load static %}
+{{ form.media }} 
 {% load crispy_forms_tags %}
 
 {% block content %}
@@ -14,7 +15,7 @@
     <form action = '.' method="POST">
         <div class="mb-3 ml-3">
         {% csrf_token %}
-       {% crispy form %}
+        {% crispy form %}
         <button type="submit" class="btn btn-primary">Add Expense</button>
         </div>
     </form>
