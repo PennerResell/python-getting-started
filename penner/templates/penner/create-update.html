@@ -12,7 +12,7 @@
     <div class="card-body">
       <h5 class="card-title">Penner Expense Tracking</h5>
     <form action = '.' method="POST">
-        <div class="mb-3">
+        <div class="mb-3 l-4">
         {% csrf_token %}
        {% crispy form %}
         <button type="submit" class="btn btn-primary">Add Expense</button>
