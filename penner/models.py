@@ -15,7 +15,7 @@ LOCATION_CHOICES = [
 
 
 class Expense(models.Model):
-    name = models.CharField(max_length=250)
+    name = models.CharField('Store Name', max_length=250)
     slug = models.SlugField(max_length=250)
     buyer = models.ForeignKey(User, default='1',
                                on_delete=models.CASCADE,
