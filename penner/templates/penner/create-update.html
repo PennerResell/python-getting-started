@@ -10,7 +10,7 @@
 <div style="margin-top:30px;">
     <form action = '.' method="POST">
         {% csrf_token %}
-        {{ form.as_p }}
+        {{ form|crispy }}
         <button style='margin-top:10px;' type='submit' >Add Expense</button>
     </form>
 </div>
