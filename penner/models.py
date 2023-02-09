@@ -3,6 +3,7 @@ from datetime import date
 from django.urls import reverse
 from django.contrib.auth.models import User
 
+
 LOCATION_CHOICES = [
     ('TH', "Thrift"),
     ('ES', "Estate"),

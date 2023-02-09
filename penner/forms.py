@@ -28,6 +28,4 @@ class ExpenseForm(forms.ModelForm):
     class Meta:
         model=Expense
         fields = ['name', 'location', 'amount','purchased']
-        widgets = {
-            'purchased':DatePickerInput()
-        }
+        
