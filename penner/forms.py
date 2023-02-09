@@ -17,7 +17,7 @@ class ExpenseForm(forms.ModelForm):
                                 'class' : 'input is-small mb-2 mt-1',
                                 
                             }))
-    amount = forms.CharField(
+    amount = forms.DecimalField(
         widget=forms.TextInput(
                             attrs={
                                 'style' : 'width: 50px;',
@@ -26,4 +26,4 @@ class ExpenseForm(forms.ModelForm):
                             }))
     class Meta:
         model=Expense
-        fields = ['name', 'location', 'amount']
+        fields = ['name', 'location', 'amount','purchased']
