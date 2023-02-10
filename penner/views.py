@@ -1,14 +1,18 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import Expense
 from .forms import ExpenseForm
+from django.db.models import Avg, Count, Min, Sum
 
 
 
 
 def expense_list_veiw(request, id=None):
     qs = Expense.objects.all()
+    sum = Expense.objects.all().aggregate(Sum('amount'))
     context = {
-        'object_list': qs
+        'object_list': qs,
+        'sum': sum
+        
     }
     return render(request, 'penner/list.html', context)
 
