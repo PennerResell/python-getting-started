@@ -8,7 +8,7 @@ from django.db.models import Avg, Count, Min, Sum
 
 def expense_list_veiw(request, id=None):
     qs = Expense.objects.all()
-    sum = Expense.objects.all().aggregate(Sum('amount'))
+    sum = Expense.objects.all().aggregate(Sum('amount'))['amount__sum']
     context = {
         'object_list': qs,
         'sum': sum

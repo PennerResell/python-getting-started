@@ -9,13 +9,13 @@
 <ul>
     {% for x in object_list %}
         {% if x.name %}
-            <li><a href='{{ x.get_absolute_url }}'>{{ x.name }} - ${{ x.amount }}</a>
+            <li><a href='{{ x.get_absolute_url }}'>{{ x.name }} - ${{ x.amount }}</a>: {{ x.purchased }}
             </li>
         {% endif %}
     {% endfor %}
 </ul>
 
 
-<p>The total so far is: {{ sum }}</p>
+<p>The total so far is: {{ amount__sum }}</p>
 
 {% endblock content %}
