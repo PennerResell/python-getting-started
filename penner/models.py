@@ -28,6 +28,9 @@ class Expense(models.Model):
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
     
+    class Meta:
+        ordering = ['-purchased']
+    
     def get_absolute_url(self):
         return reverse ('penner:detail', kwargs={'id':self.id} )
     
